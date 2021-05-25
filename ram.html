@@ -1,17 +1,47 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+function sendEmail() {
+alert("chala");
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "cryptographyhindi@gmail.com",
+        Password: "rokie123@",
+        To: 'rokie9340@gmail.com',
+        From: "cryptographyhindi@gmail.com",
+        Subject: "Sending Email using javascript",
+        Body: "Ashish Gothi",
+      }).then(function (message) {
+          alert("mail sent successfully")
+        });
+}
+</script>
+</head>
 <body>
+
+<style>
+body {
+  background-image: url('images/bg.png');
+  background-repeat: no-repeat;
+}
+</style>
+
 <img class='my-picture' src="images/insta.png"  width="40" height="40"alt="photo">
 
 <form action="action_page.php" style="border:1px solid #ccc">
   <div class="container">
     <head>      
-         <title>RAM</title>    
+         <title>Photology</title>    
       </head>    
       <body>      
+
          <h1 style="color:black;font-size:30px;">Sign Up</h1>      
            
       </body>
     <p>Kindly signup below.</p>
-    <hr>
+    
 
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
@@ -29,14 +59,16 @@
     <p>By creating an account you agree to our Terms & Privacy.</p>
 
     <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn"> <li class='nav-item'>
-              <a class='nav-link' href='front.html'>Sign Up</a>
+      <button type="button" class="cancelbtn"><li class='nav-item'>
+              <a class='nav-link' href='index.html'>Cancel</a>
+           </li></button>
+
+      <button type="submit" class="signupbtn" > <li class='nav-item'>
+              <a class='nav-link'  onClick='sendEmail()'>Sign Up</a>
            </li></button>
  
         
     </div>
   </div>
 </form>
-
-<span><div><footer>© 2023 Instagram</span></div></footer>
+<span><div><footer>© 2023 Instagram</span></footer></div>
